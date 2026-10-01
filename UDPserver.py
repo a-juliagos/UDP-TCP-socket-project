@@ -55,14 +55,14 @@ r"""            *
 ]
 
 while True:
-    message, clientAddress = serverSocket.recvfrom(2048)
-    message = message.decode().strip().lower()
+    color, clientAddress = serverSocket.recvfrom(2048)
+    color = color.decode().strip().lower()
     ascii_art = random.choice(ascii_arts)
 
-    if message == "verde":
+    if color == "verde":
         response = Fore.GREEN + ascii_art + Style.RESET_ALL
 
-    elif message == "vermelho":
+    elif color == "vermelho":
         response = Fore.RED + ascii_art + Style.RESET_ALL
         
     else:

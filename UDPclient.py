@@ -14,8 +14,8 @@ print(Fore.YELLOW +"""
 |          *  [2] Vermelho    *           |
 ===========================================
 """ + Style.RESET_ALL)
-message = input("Digite 'verde' ou 'vermelho': ")
-clientSocket. sendto(message.encode(), (serverName, serverPort))
+color = input("Digite 'verde' ou 'vermelho': ")
+clientSocket. sendto(color.encode(), (serverName, serverPort))
 response, serverAddress = clientSocket.recvfrom(2048)
 print(response.decode ())
 clientSocket.close() 
